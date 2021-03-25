@@ -31,11 +31,13 @@ public class linkedList {
         int num=s.nextInt();
         Node.getNthElementFromEnd(head,num);
         System.out.println("Reversing list");
-        Node.printList(Node.ReverseList(head));
+        head= Node.ReverseList(head);
+        Node.printList(head);
         System.out.println("Reverse list using recursion");
+        head=Node.ReverseListRecursive(head,null);
+        Node.printList(head);
         System.out.println("To remove duplicates: ");
         Node.removeDuplicates(head);
-        Node.printList(head);
     }
 
 }
@@ -193,7 +195,10 @@ class Node{
                 else
                     curr = curr.next;
             }
+            printList(head);
         }
+
     }
 
 }
+
